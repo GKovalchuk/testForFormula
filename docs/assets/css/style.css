@@ -420,7 +420,7 @@ a:hover {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1005;
 }
 
 .header__left {
@@ -566,8 +566,9 @@ a:hover {
     border: none;
     font-size: 0;
     color: transparent;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 5%;
+    z-index: 1010;
     right: 1.5rem;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -816,9 +817,14 @@ a:hover {
     color: #2B2B2B;
 }
 
+@media (max-width: 1180px) {
+    .about__top-text {
+        margin: 5rem 0 0 0;
+    }
+}
+
 @media (max-width: 575px) {
     .about__top-text {
-        margin: 0;
         font-size: 1.4rem;
     }
 }
@@ -1488,10 +1494,10 @@ a:hover {
     width: 100%;
     height: calc(100vh - 96px);
     overflow: auto;
-    position: absolute;
+    position: fixed;
     top: 96px;
     left: 0;
-    z-index: 1010;
+    z-index: 1000;
     background-color: #fff;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
