@@ -1,0 +1,128 @@
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3rem;
+
+	border-radius: 3rem;
+	background-color: $white;
+
+	&.card-about {
+		padding: 4rem 3rem;
+
+		@include breakpoint($tablet-bp) {
+			padding: 2rem;
+		}
+
+		@include breakpoint($mobile-bp) {
+			padding: 3rem;
+		}
+	}
+
+	@include breakpoint($tablet-bp) {
+		padding: 2rem;
+	}
+}
+
+.card__top {
+	width: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	align-items: flex-end;
+}
+
+.card__number {
+	margin-right: 1rem;
+
+	font-weight: 600;
+	font-size: 5.4rem;
+	line-height: 4.5rem;
+	color: $color-accent1;
+}
+
+.card__title {
+	font-weight: 600;
+	font-size: 1.8rem;
+	line-height: 1.8rem;
+	color: rgba($black, .9);
+
+	&.card-achievements {
+		margin-bottom: 2rem;
+
+		font-weight: 500;
+		font-size: 2.3rem;
+		line-height: 3rem;
+
+		@include breakpoint($tablet-bp) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.card__text {
+	margin-top: 2.5rem;
+
+	font-weight: 400;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	color: $grey-text;
+
+	&.card-achievements {
+		margin-top: 0;
+		margin-bottom: 5rem;
+
+		line-height: 2.3rem;
+
+		@include breakpoint($tablet-bp) {
+			font-size: 1.4rem;
+		}
+	}
+
+	@include breakpoint($tablet-bp) {
+		font-size: 1.7rem;
+		line-height: 1.4rem;
+	}
+}
+
+.card__footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	>time {
+		font-size: 1.5rem;
+		line-height: 2.3rem;
+		color: rgba(#888888, .9);
+	}
+
+	&-btn {
+		width: 12.8rem;
+		height: 3rem;
+
+		padding: .6rem 2.2rem;
+
+		background: $color-accent1-light;
+		border-radius: 2rem;
+
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+		color: rgba($color-accent1, .9);
+		text-decoration: none;
+		text-align: center;
+
+		transition: background .2s linear;
+
+		// @include breakpoint($mobile-bp) {
+		// 	padding: 3rem;
+		// }
+
+		&:hover,
+		.active {
+			background: $color-accent1;
+
+			text-decoration: none;
+			color: $white;
+		}
+	}
+}

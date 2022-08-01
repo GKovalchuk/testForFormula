@@ -1,0 +1,86 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+
+	padding: 1.8rem 2.8rem;
+
+	background: $color-accent1;
+	border: none;
+	border-radius: 1.5rem;
+	cursor: pointer;
+	text-decoration: none;
+
+	font-family: inherit;
+	font-size: 1.6rem;
+	line-height: 1.9rem;
+	font-weight: 600;
+	color: $white;
+
+	transition: background .2s linear;
+
+	&:hover,
+	:focus {
+		text-decoration: none;
+		background: darken($color-accent1, 10%);
+	}
+
+	&-intro {
+		@include breakpoint($mobile-bp) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&-offer {
+		width: 34.5rem;
+	}
+
+	&-contacts {
+		width: 19.9rem;
+
+		font-weight: 500;
+	}
+
+	&-transparent {
+		width: 16rem;
+		padding: 1.1rem 1.8rem;
+
+		background: none;
+		border: 1px solid #207FF1;
+		border-radius: 1.2rem;
+
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+		font-weight: 400;
+		color: $color-accent1;
+
+		&:hover,
+		:focus {
+			color: $white;
+		}
+	}
+
+	&-round {
+		width: 5rem;
+		height: 5rem;
+
+		border-radius: 50%;
+
+		&:hover,
+		:focus {
+			background: $color-accent1-light;
+		}
+	}
+
+	&-form {
+		width: 19rem;
+
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 1.9rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+	}
+}

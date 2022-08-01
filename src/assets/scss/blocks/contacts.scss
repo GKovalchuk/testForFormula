@@ -1,0 +1,80 @@
+.contacts {
+	background-color: $white;
+}
+
+.contacts__inner {
+	display: flex;
+	justify-content: space-between;
+
+	@include breakpoint($mobile-bp) {
+		flex-wrap: wrap;
+	}
+}
+
+.contacts__left {
+	width: 20rem;
+	height: auto;
+}
+
+.contacts__right {
+	width: 69%;
+	height: auto;
+
+	margin-left: 3rem;
+
+	background-image: url(/assets/images/footerMapPlaceholder.png);
+	background-size: cover;
+	background-position: center;
+	border-radius: 3rem;
+
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+
+		margin-left: 0rem;
+
+		min-height: 23rem;
+	}
+}
+
+.phoneNumber {
+	height: 2rem;
+	min-width: 21rem;
+
+	margin: auto 0;
+
+	display: flex;
+	flex-wrap: nowrap;
+
+	&-text {
+		font-weight: 600;
+		font-size: 1.7rem;
+		line-height: 2rem;
+
+		color: $black;
+	}
+
+	&.contacts__left {
+		margin-top: 5.3rem;
+	}
+
+	&-header {
+		@include breakpoint ($tablet-bp) {
+			display: none;
+		}
+	}
+}
+
+.icon-phone {
+	padding-right: 1.4rem;
+}
+
+.contacts__left-text {
+	width: 19.9rem;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+
+	font-size: 1.5rem;
+	line-height: 2.3rem;
+
+	color: rgba(#373737, .9);
+}

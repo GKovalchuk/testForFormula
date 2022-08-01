@@ -1,0 +1,67 @@
+@import "vars";
+@import "mixins";
+@import "vendor/reset.scss";
+
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $primary;
+
+	font-family: 'SF UI Text';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.9rem;
+	color: $color-text;
+
+	@include breakpoint($mobile-bp) {
+		&.show__sidebar {
+			overflow: hidden;
+		}
+	}
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+
+/* Blocks */
+
+@import "blocks/page.scss";
+
+/* Blocks Header */
+@import "blocks/header.scss";
+@import "blocks/nav.scss";
+@import "blocks/burger.scss";
+
+/* Blocks body */
+@import "blocks/main.scss";
+@import "blocks/container.scss";
+@import "blocks/section.scss";
+@import "blocks/intro.scss";
+@import "blocks/about.scss";
+@import "blocks/card.scss";
+@import "blocks/offer.scss";
+@import "blocks/achievements.scss";
+@import "blocks/contacts.scss";
+@import "blocks/social.scss";
+@import "blocks/btn.scss";
+@import "blocks/form.scss";
+
+/* Blocks modal */
+@import "blocks/modal.scss";
+@import "blocks/sidebar.scss";

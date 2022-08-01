@@ -1,0 +1,65 @@
+.burger {
+	display: none;
+
+	width: 3.6rem;
+	height: 2rem;
+	padding: 0;
+
+	background: none;
+	border: none;
+
+	font-size: 0;
+	color: transparent;
+
+	position: fixed;
+	top: 5%;
+	z-index: $z-index-modal;
+	right: 1.5rem;
+
+	transform: translateY(-50%);
+
+	&:before,
+	span {
+		display: block;
+		height: .2rem;
+
+		background-color: $black;
+
+		position: absolute;
+	}
+
+	&:before {
+		width: 100%;
+
+		content: '';
+		top: -1px;
+		transition: transform 0.2s linear;
+	}
+
+	span {
+		width: 56%;
+
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		transition: transform 0.2s linear,
+			width 0.2s linear, ;
+	}
+
+	.show__sidebar & {
+		span {
+			width: 100%;
+			top: 50%;
+			transform: rotate(-45deg);
+		}
+
+		&:before {
+			top: 50%;
+			transform: rotate(45deg);
+		}
+	}
+
+	@include breakpoint($mobile-bp) {
+		display: block;
+	}
+}

@@ -1,0 +1,33 @@
+.container {
+	max-width: 152rem;
+	// max-width: 74%;
+	margin: 0 auto;
+	padding: 0 5rem;
+
+	&-header {
+		height: $header-height;
+
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		flex-wrap: nowrap;
+	}
+
+	&-offer {
+		max-width: 132rem;
+
+		@include breakpoint($mobile-bp) {
+			margin: 2rem auto;
+		}
+	}
+
+	@include breakpoint($tablet-bp) {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}

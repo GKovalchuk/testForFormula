@@ -1,0 +1,14 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	overflow: hidden;
+
+	@include breakpoint($mobile-bp) {
+
+		.show__sidebar & {
+			position: relative;
+		}
+	}
+}

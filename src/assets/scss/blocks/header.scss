@@ -1,0 +1,83 @@
+.header {
+	width: 100%;
+	height: $header-height;
+
+	background-color: $color-header;
+	border-radius: 0px 0px 30px 30px;
+
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: $z-index-header;
+}
+
+.header__left {
+	width: 24.7rem;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+
+	margin: auto 0;
+
+	&-text {
+		margin-left: 1.5rem;
+
+		font-style: normal;
+		font-weight: 800;
+		font-size: 2rem;
+		line-height: 2.4rem;
+		word-wrap: none;
+
+		color: $black;
+
+		@include breakpoint ($tablet-bp) {
+			display: none;
+		}
+
+		@include breakpoint ($mobile-bp) {
+			display: block;
+		}
+	}
+
+	@include breakpoint ($tablet-bp) {
+		width: 5.5rem;
+	}
+
+	@include breakpoint ($mobile-bp) {
+		width: auto;
+	}
+}
+
+.header__middle {
+	width: 36.2%;
+	height: fit-content;
+
+	margin: auto 0;
+
+	@include breakpoint ($tablet-bp) {
+		width: 60%;
+	}
+
+	@include breakpoint ($mobile-bp) {
+		display: none;
+	}
+}
+
+.header__right {
+	width: 28%;
+	height: fit-content;
+
+	margin: auto 0;
+
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+
+	@include breakpoint ($tablet-bp) {
+		width: 20%;
+	}
+
+	@include breakpoint ($mobile-bp) {
+		display: none;
+	}
+}

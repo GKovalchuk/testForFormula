@@ -1,0 +1,22 @@
+.social {
+	margin: 3rem 2rem 5rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+.social__btn {
+	position: relative;
+}
+
+.social__btn-image {
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate3d(-50%, -50%, 0);
+}

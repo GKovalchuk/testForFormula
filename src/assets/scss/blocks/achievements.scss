@@ -1,0 +1,39 @@
+.achievements {
+	background-color: $secondary;
+}
+
+.achievements__top {
+	width: 8rem;
+
+	margin-bottom: 10.3rem;
+
+	@include breakpoint($tablet-bp) {
+		margin-bottom: 6.3rem;
+	}
+}
+
+.achievements__bottom {
+	height: fit-content;
+	max-height: 65.4rem;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 3rem;
+
+	@include breakpoint($tablet-bp) {
+		max-height: 116.5rem;
+
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-gap: 2rem;
+	}
+
+	@include breakpoint($mobile-bp) {
+		max-height: 190rem;
+
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		grid-gap: 2rem;
+	}
+}

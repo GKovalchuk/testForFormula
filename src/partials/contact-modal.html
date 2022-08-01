@@ -1,0 +1,39 @@
+<div class="modal" id="contact-modal">
+	<div class="modal__content">
+		<button class="modal__close" type="button">
+			<img src="/assets/images/Close.png" alt="Закрыть">
+		</button>
+
+		<h2 class="modal__content-title">
+			Форма обратной связи
+		</h2>
+		<p class="modal__content-text">
+			Заполните форму и получите выгодное решение
+		</p>
+
+		<form action="/" class="form" method="post">
+			<div class="form__group ">
+				<p class="form__group-text">Ваше Имя</p>
+				<input type="text" class="form__control">
+			</div>
+			<div class="form__group ">
+				<p class="form__group-text">Номер телефона</p>
+				<input class="form__control" type="tel" placeholder="+7 (___) ___-__-__"
+					pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+			</div>
+			<div class="form__group ">
+				<p class="form__group-text">Опишите свою ситуацию</p>
+				<textarea class="form__control form__control-textarea"></textarea>
+			</div>
+			<div class="form__footer">
+				<div class="form__footer-left">
+					<input class="form__footer-checkbox" type="checkbox">
+					<p class="form__footer-text">
+						Я прочитал и согласен с политикой конфиденциальности
+					</p>
+				</div>
+				<button class="btn btn-form" type="submit">Оставить заявку</button>
+			</div>
+		</form>
+	</div>
+</div>
